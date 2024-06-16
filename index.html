@@ -115,22 +115,7 @@
                 font-size: 15px; 
             }
     </style>
-    <audio id="myAudio">
-        <source src="music.mp3" type="audio/mpeg">
-    </audio>
     <script>
-        function playMusic() {
-            var audio = document.getElementById("myAudio");
-            audio.play();
-        }
-        playMusic();
-        (function(){
-            function playMusic() {
-                alert("test function is called");
-            }
-            playMusic();
-        })();
-
         function updateTime() {
             var targetDate = new Date("June 14, 2025 08:30:00");
             var currentDate = new Date();
@@ -163,6 +148,10 @@
     </script>
 </head>
 <body onload="updateTime()">
+    <audio autoplay>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
     <p class="myp">
         2025中考倒计时：
         <span id="years" class="mytime"></span>年
