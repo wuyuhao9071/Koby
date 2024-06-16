@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>感谢赞助</title>
+    <script>
+      function goBack() {
+          window.history.back(); // 使用浏览器的历史记录返回上一页
+      }
+    </script>
+    <style>
+      body {
+        background-color: #a3bdfa;
+      }
+      table {
+        width: 60%;
+        border-collapse: collapse; /* 将单元格边框合并为一个 */
+      }
+      tr {
+        line-height: 5;
+      }
+      td {
+        font-size: 20px;
+        text-align: center;
+        border: 2px solid black; /* 设置单元格边框 */
+        padding: 1px; /* 设置单元格内边距 */
+      }
+      th {
+        text-align: center;
+        border: 2px solid black; /* 设置表头边框 */
+        padding: 1px; /* 设置表头内边距 */
+      }
+      .fixed-right {
+        position: fixed;
+        right: 0;
+        top: 40%;
+        transform: translateY(-50%); /* 垂直居中 */
+        max-width: 30%;
+      }
+      .grey-button {
+            background-color: #221a57;
+            color: #fff;
+            border: none;
+            padding: 20px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s; /* 添加过渡效果，让颜色变化更加平滑 */
+      }
+      .grey-button:hover {
+            background-color: #273f77; /* 鼠标悬停时的背景颜色 */
+      }
+      @media (max-width: 768px) {
+        .grey-button {
+            background-color: #221a57;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            position: fixed;
+            top: 60px;
+            right: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s; /* 添加过渡效果，让颜色变化更加平滑 */
+        }
+        .grey-button:hover {
+              background-color: #273f77; /* 鼠标悬停时的背景颜色 */
+        }
+      }
+    </style>
+</head>
+<body>
+    <h1>感谢以下朋友赞助！是他们维护了网站</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>姓名</th>
+          <th>金额</th>
+          <th>备注</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>李*炎</td>
+          <td>¥1.00</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>王*璧而</td>
+          <td>¥0.88</td>
+          <td>VIP</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>方*宇</td>
+          <td>¥0.50</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>曹*涵</td>
+          <td>¥1.11</td>
+          <td>VIP</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>张*羽</td>
+          <td>¥0.66</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+    <img src="money.png" alt="Money Image" class="fixed-right">
+    <a href="#" onclick="goBack();" class="grey-button">返回首页</a>
+</body>

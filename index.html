@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牢大网</title>
+    <style>
+        body {
+            /*background-image: url('a.jpg');
+            #background-size: cover;
+            #background-position: center;*/
+            background-color: rgba(0, 0, 0, 1);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .content {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+        h1, p {
+            color: #333;
+        }
+        h1 {
+            font-size: 90px; 
+            color: white;
+            line-height: 0.1 ;
+        }
+        h2 {
+            font-size: 60px; 
+            color: #999999;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 70%;
+        }
+        p  {
+            font-size: 20px;
+            color: #aaaaaa;
+        }
+        .grey-button {
+            background-color: #221a57;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s; /* 添加过渡效果，让颜色变化更加平滑 */
+        }
+        .grey-button:hover {
+            background-color: #273f77; /* 鼠标悬停时的背景颜色 */
+        }
+        .mytime {
+            color: #ff0000;
+            width: 200px; /* 设置固定宽度 */
+            text-align: right; /* 设置文本右对齐 */
+        }
+        .myp {
+            font-size: 20px; 
+            color: #b9b9b9; 
+            text-align: left;
+        }
+        .count {
+            color: #999999;
+            top: 5%;
+        }
+        .num {
+            color: white;
+        }
+        @media (max-width: 768px) {
+            /* 在小屏幕上进一步调整字体大小 */
+            h1 {
+                font-size: 40px;
+                color: white;
+                line-height: 1 ;
+            }
+            h2 {
+                font-size: 30px; 
+                color: #999999;
+            }
+            p {
+                font-size: 15px;
+               }
+            .content {
+                background-color: rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                border-radius: 10px;
+                max-width: 360px;
+                margin: 0 auto;
+            }
+            .myp {
+                font-size: 15px; 
+            }
+    </style>
+    <script>
+        function playMusic() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+
+        // 当页面加载完成时调用播放函数
+            window.onload = function() {
+                playMusic();
+        };
+
+        function updateTime() {
+            var targetDate = new Date("June 14, 2025 08:30:00");
+            var currentDate = new Date();
+            var timeDiff = targetDate.getTime() - currentDate.getTime();
+
+            // 计算时间差，单位为毫秒
+            var ms = Math.floor(timeDiff);
+            var seconds = Math.floor(timeDiff / 1000);
+            var minutes = Math.floor(seconds / 60);
+            var hours = Math.floor(minutes / 60);
+            var days = Math.floor(hours / 24);
+            var years = Math.floor(days / 365)
+
+            ms %= 1000;
+            seconds %= 60;
+            minutes %= 60;
+            hours %= 24;
+            days %= 365;
+
+            // 将时间差显示在页面上
+            document.getElementById('years').textContent = years;
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+            document.getElementById('ms').textContent = ms;
+
+            setTimeout(updateTime, 10); 
+        }
+    </script>
+</head>
+<body onload="updateTime()">
+    <p class="myp">
+        2025中考倒计时：
+        <span id="years" class="mytime"></span>年
+        <span id="days" class="mytime"></span>天
+        <span id="hours" class="mytime"></span>小时
+        <span id="minutes" class="mytime"></span>分钟
+        <span id="seconds" class="mytime"></span>秒
+        <span id="ms" class="mytime"></span>毫秒
+    </p>
+    <div class="content">
+      <img src="a.jpg" alt="个人照片">
+      <h1>科比·布莱恩特</h1>
+      <h2>Kobe Bryant</h2>
+      <p>科比·布莱恩特（Kobe Bryant，1978年8月23日—2020年1月26日），全名科比·比恩·布莱恩特·考克斯（Kobe Bean Bryant Cox），出生于美国宾夕法尼亚州费城，美国已故篮球运动员，司职得分后卫/小前锋。 
+1996年NBA选秀，科比于第1轮第13顺位被夏洛特黄蜂队选中并被交易至洛杉矶湖人队，整个NBA生涯全部效力于洛杉矶湖人队；共夺得5次NBA总冠军、1次NBA常规赛MVP、2次NBA总决赛MVP、4次NBA全明星赛MVP、2次NBA赛季得分王；共入选NBA全明星首发阵容18次、NBA最佳阵容15次（其中一阵11次、二阵2次、三阵2次）、NBA最佳防守阵容12次（其中一阵9次、二阵3次）。 
+2007年，科比首次入选美国国家男子篮球队，后帮助美国队夺得2007年美洲男篮锦标赛金牌、2008年北京奥运会男篮金牌以及2012年伦敦奥运会男篮金牌。
+2015年11月30日，科比宣布将在赛季结束后退役。 
+2017年12月19日，湖人队为科比举行了8号和24号双球衣退役仪式。
+2018年3月，科比凭借短片《亲爱的篮球》荣获奥斯卡最佳动画短片奖。 
+当地时间2020年1月26日（北京时间1月27日），科比因直升机事故遇难，时年41岁。
+同年4月5日，科比入选奈史密斯篮球名人纪念堂。 
+        </p>
+    </div>
+    <a href="old/money.html" class="grey-button">赞助</a>
+    <audio id="myAudio">
+      <source src="music.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    </script>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+    <span id="busuanzi_container_site_pv" class="count">
+        本站总访问次数<span id="busuanzi_value_site_pv" class="num"></span>次 
+    </span>
+    <span id="busuanzi_container_site_uv" class="count">
+        本站总访问人数<span id="busuanzi_value_site_uv" class="num"></span>人
+    </span>
+</body>
+</html>
