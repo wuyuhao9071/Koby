@@ -115,6 +115,9 @@
                 font-size: 15px; 
             }
     </style>
+    <audio id="myAudio">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
     <script>
         function playMusic() {
             var audio = document.getElementById("myAudio");
@@ -125,6 +128,13 @@
             window.onload = function() {
                 playMusic();
         };
+
+        (function(){
+            function playMusic() {
+                alert("test function is called");
+            }
+            playMusic();
+        })();
 
         function updateTime() {
             var targetDate = new Date("June 14, 2025 08:30:00");
@@ -182,10 +192,6 @@
         </p>
     </div>
     <a href="old/money.html" class="grey-button">赞助</a>
-    <audio id="myAudio">
-      <source src="music.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
     </script>
         <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
     </script>
