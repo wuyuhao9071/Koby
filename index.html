@@ -158,9 +158,38 @@
 
             setTimeout(updateTime, 10); 
         }
+        function updateTime2() {
+            var targetDate = new Date("June 7, 2025 09:00:00");
+            var currentDate = new Date();
+            var timeDiff = targetDate.getTime() - currentDate.getTime();
+
+            // 计算时间差，单位为毫秒
+            var ms = Math.floor(timeDiff);
+            var seconds = Math.floor(timeDiff / 1000);
+            var minutes = Math.floor(seconds / 60);
+            var hours = Math.floor(minutes / 60);
+            var days = Math.floor(hours / 24);
+            var years = Math.floor(days / 365)
+
+            ms %= 1000;
+            seconds %= 60;
+            minutes %= 60;
+            hours %= 24;
+            days %= 365;
+
+            // 将时间差显示在页面上
+            document.getElementById('years2').textContent = years;
+            document.getElementById('days2').textContent = days;
+            document.getElementById('hours2').textContent = hours;
+            document.getElementById('minutes2').textContent = minutes;
+            document.getElementById('seconds2').textContent = seconds;
+            document.getElementById('ms2').textContent = ms;
+
+            setTimeout(updateTime, 10); 
+        }
     </script>
 </head>
-<body onload="updateTime()">
+<body onload="updateTime2()">
     <audio autoplay>
         <source src="music.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -173,6 +202,15 @@
         <span id="minutes" class="mytime"></span>分钟
         <span id="seconds" class="mytime"></span>秒
         <span id="ms" class="mytime"></span>毫秒
+    </p>
+    <p class="myp">
+        2025高考倒计时：
+        <span id="years2" class="mytime"></span>年
+        <span id="days2" class="mytime"></span>天
+        <span id="hours2" class="mytime"></span>小时
+        <span id="minutes2" class="mytime"></span>分钟
+        <span id="seconds2" class="mytime"></span>秒
+        <span id="ms2" class="mytime"></span>毫秒
     </p>
     <div class="content">
       <img src="a.jpg" alt="个人照片">
