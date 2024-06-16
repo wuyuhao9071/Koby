@@ -125,10 +125,14 @@
                 font-size: 13px; 
             }
             .link {
-                font-size: 9px
+                font-size: 7px
             }
     </style>
     <script>
+        function load() {
+            updateTime()
+            updateTime2()
+        }
         function updateTime() {
             var targetDate = new Date("June 14, 2025 08:30:00");
             var currentDate = new Date();
@@ -185,11 +189,11 @@
             document.getElementById('seconds2').textContent = seconds;
             document.getElementById('ms2').textContent = ms;
 
-            setTimeout(updateTime, 10); 
+            setTimeout(updateTime2, 10); 
         }
     </script>
 </head>
-<body onload="updateTime2()">
+<body onload="load()">
     <audio autoplay>
         <source src="music.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -236,7 +240,7 @@
     <span id="busuanzi_container_site_uv" class="count">
         本站总访问人数<span id="busuanzi_value_site_uv" class="num"></span>人
     </span>
-    <p class="link">WYH独立制作 B站</p>
-    <a href="https://b23.tv/LAJpF40" class="link">@爱玩IT的中学生</a>
+    <p class="link">WYH独立制作</p>
+    <a href="https://b23.tv/LAJpF40" class="link">B站@爱玩IT的中学生</a>
 </body>
 </html>
