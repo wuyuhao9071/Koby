@@ -17,10 +17,17 @@
     <title>wuyuhao9071还有多久挖到边境？</title>
 
     <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+    }
     .progress-container {
         width: 80%;
         margin: 20px auto;
         border: 1px solid #ccc;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     .progress-bar {
         width: 0%;
@@ -28,20 +35,27 @@
         background-color: #4CAF50;
         text-align: center;
         line-height: 30px;
-        color: white;
+        color: black;
+    }
+    .progress-text {
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
     }
     </style>
 </head>
 <body>
-    <div class="progress-container">
+
+<div class="progress-container">
   <div class="progress-bar" id="progressBar">0%</div>
 </div>
+<div class="progress-text" id="progressText">0 / 375000</div>
 
 <script>
   // 设置起始时间
-  var startTime = new Date('2024-08-06T19:20:00').getTime();
-  var targetProgress = 375000;
-  var completionRatePerSecond = 10;
+  var startTime = new Date('2024-08-06T18:00:00').getTime();
+  var targetProgress = 3750000;
+  var completionRatePerSecond = 1;
 
   // 更新进度条的宽度和显示的进度文本
   function updateProgressBar() {
@@ -50,7 +64,7 @@
     var elapsedTime = currentTime - startTime;
 
     // 计算当前应有的进度
-    var currentProgress = Math.floor(elapsedTime / 1000) * completionRatePerSecond;
+    var currentProgress = Math.floor(elapsedTime / 100) * completionRatePerSecond;
 
     // 防止超过目标进度
     if (currentProgress > targetProgress) {
@@ -64,6 +78,9 @@
     document.getElementById("progressBar").style.width = percentage + "%";
     // 更新显示的进度文本
     document.getElementById("progressBar").innerHTML = percentage.toFixed(2) + "%";
+
+    // 更新具体进度文本
+    document.getElementById("progressText").textContent = currentProgress.toLocaleString() + " / " + targetProgress.toLocaleString();
 
     // 如果未完成目标进度，继续更新
     if (currentProgress < targetProgress) {
