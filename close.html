@@ -28,6 +28,7 @@
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, #E78E21, #005DF3);
+            background-attachment: fixed;
             color: #fff;
             text-align: center;
         }
@@ -94,6 +95,35 @@
             background-color: #273f77; /* 鼠标悬停时的背景颜色 */
         }
 
+
+        .comments-section {
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        .comment {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .comment:last-child {
+            border-bottom: none;
+        }
+        .comment-author {
+            font-weight: bold;
+            color: #333;
+        }
+        .comment-text {
+            margin-top: 5px;
+            color: #000000;
+        }
+        .container2 {
+            width: 80%;
+            margin: 0 auto;
+            background: rgba(160, 160, 160, 0.5);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+        }
         /* 媒体查询 */
         @media (max-width: 600px) {
             .title {
@@ -135,6 +165,44 @@
         <div>秒数: <span id="seconds">0</span></div>
         <div>毫秒数: <span id="milliseconds">0</span></div>
     </div>
+    <br>
+
+    <div class="container2">
+        <div class="comments-section">
+            <h2>留言</h2>
+            <div class="comment">
+                <a class="comment-author" href="https://choa.fun/user/116361">gzzx-柠檬qwq</a>
+                <div class="comment-text">
+                    <p>昔日豪言震四方，欲超贴吧傲群芳。</p>
+                    <p>网络江湖风云起，炒饭一社独领航。</p>
+                    <br>
+                    <p>会员云集话家常，兴趣相投聚一堂。</p>
+                    <p>欢声笑语常相伴，共筑梦想似天堂。</p>
+                    <br>
+                    <p>奈何世事多变幻，风雨飘摇难久长。</p>
+                    <p>经营困境难自解，社区灯火渐昏黄。</p>
+                    <br>
+                    <p>管理无力难维继，用户流失心已伤。</p>
+                    <p>关闭消息传四海，哀鸿遍野泪沾裳。</p>
+                    <br>
+                    <p>回首往昔辉煌日，豪情万丈似长江。</p>
+                    <p>如今落寞收场去，空留余恨绕心房。</p>
+                </div>
+            </div>
+            <!--
+            <div class="comment">
+                <div class="comment-author">用户2</div>
+                <div class="comment-text">这是第二个评论的内容。这个评论可能会比较长一些，展示更多的文字。</div>
+            </div>
+            <div class="comment">
+                <div class="comment-author">用户3</div>
+                <div class="comment-text">这是第三个评论的内容。</div>
+            </div>
+            -->
+        </div>
+    </div>
+
+
     <a href="old/money.html" class="grey-button">赞助名单</a>
 
 
