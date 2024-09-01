@@ -73,6 +73,57 @@
             color: yellow;
             font-size: 12px
         }
+        .grey-button {
+            background-color: #221a57;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s; /* 添加过渡效果，让颜色变化更加平滑 */
+        }
+        .grey-button:hover {
+            background-color: #273f77; /* 鼠标悬停时的背景颜色 */
+        }
+
+        /* 媒体查询 */
+        @media (max-width: 600px) {
+            .title {
+                font-size: 1.5rem;
+            }
+            .countdown div {
+                font-size: 1rem;
+            }
+            .countdown span {
+                font-size: 2rem;
+                display: block;
+            }
+            .grey-button {
+                background-color: #221a57;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-top: 10px;
+                cursor: pointer;
+                position: fixed;
+                top: 60px;
+                right: 20px;
+                border-radius: 10px;
+                transition: background-color 0.3s; /* 添加过渡效果，让颜色变化更加平滑 */
+            }
+        }
     </style>
 </head>
 <body>
@@ -84,6 +135,8 @@
         <div>秒数: <span id="seconds">0</span></div>
         <div>毫秒数: <span id="milliseconds">0</span></div>
     </div>
+    <a href="old/money.html" class="grey-button">赞助名单</a>
+
 
     </script>
         <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
