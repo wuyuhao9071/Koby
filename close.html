@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4341944366157605"
+     crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7J0YJ986TY"></script>
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-7J0YJ986TY');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>炒饭，再见！</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #E78E21, #005DF3);
+            color: #fff;
+            text-align: center;
+        }
+        .title {
+            font-size: 3.7rem;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #ffeb3b;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+        .countdown {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .countdown div {
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+        .countdown span {
+            font-size: 3rem;
+            display: block;
+        }
+        .container {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin: 10px; /* 可选：调整距离边缘的距离 */
+            text-align: right;
+        }
+
+        .line {
+            display: block;
+        }
+
+        .num {
+            color: red;
+        }
+        .link {
+            color: yellow;
+            font-size: 12px
+        }
+    </style>
+</head>
+<body>
+    <div class="title">炒饭，再见</div>
+    <div class="countdown">
+        <div>天数: <span id="days">0</span></div>
+        <div>小时: <span id="hours">0</span></div>
+        <div>分钟: <span id="minutes">0</span></div>
+        <div>秒数: <span id="seconds">0</span></div>
+        <div>毫秒数: <span id="milliseconds">0</span></div>
+    </div>
+
+    </script>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+
+    <div class="container">
+        <h class="link">WYH独立制作</h><br>
+        <a href="https://b23.tv/LAJpF40" class="link">B站@爱玩IT的中学生</a>
+        <span id="busuanzi_container_site_pv" class="line">
+            本站总访问次数：<span id="busuanzi_value_site_pv" class="num"></span>次 
+        </span>
+        <span id="busuanzi_container_page_pv" class="line">
+            本页面访问次数：<span id="busuanzi_value_page_pv" class="num"></span>次
+        </span>       
+    <div>
+
+    <script>
+        function updateCountdown() {
+            const endDate = new Date('2024-11-01T00:00:00');
+            const now = new Date();
+            const diff = endDate - now;
+
+            if (diff < 0) {
+                document.querySelector('.countdown').innerHTML = '<div>炒饭，一路走好！</div>';
+                return;
+            }
+            const milliseconds = Math.floor(diff % 1000);
+            const seconds = Math.floor((diff / 1000) % 60);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+            document.getElementById('milliseconds').textContent = milliseconds;
+        }
+
+        setInterval(updateCountdown, 1);
+    </script>
+</body>
+</html>
