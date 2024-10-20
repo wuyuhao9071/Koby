@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中考倒计时</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* 纵向排列 */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .title {
+            font-size: 36px; /* 标题字体大小 */
+            color: black; /* 标题颜色 */
+            margin-bottom: 10px; /* 标题和倒计时之间的间距 */
+        }
+        .countdown {
+            display: flex;
+            gap: 5px; /* 矩形之间的间距，已减小 */
+        }
+        .box {
+            width: 80px;  /* 矩形宽度 */
+            height: 100px; /* 矩形高度 */
+            background-color: red; /* 矩形背景色 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 64px; /* 增大字体大小 */
+            color: white; /* 字体颜色 */
+            border: none; /* 去掉圆角 */
+        }
+    </style>
+</head>
+<body>
+    <div class="title">中考倒计时</div> <!-- 添加标题 -->
+    <div class="countdown">
+        <div class="box" id="digit1">0</div>
+        <div class="box" id="digit2">0</div>
+        <div class="box" id="digit3">0</div>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const endDate = new Date('2025-06-14T23:59:59');
+            const now = new Date();
+            const totalDays = Math.floor((endDate - now) / (1000 * 60 * 60 * 24));
+            
+            // 确保天数为三位数，前面补零
+            const daysString = String(totalDays).padStart(3, '0');
+            
+            document.getElementById('digit1').innerText = daysString[0];
+            document.getElementById('digit2').innerText = daysString[1];
+            document.getElementById('digit3').innerText = daysString[2];
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 60000); // 每分钟更新一次
+    </script>
+</body>
+</html>
